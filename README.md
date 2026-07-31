@@ -58,6 +58,6 @@ Outputs a static site to `dist/`, deployable to GitHub Pages, Netlify, Vercel, o
 
 This repository currently contains an interactive prototype and supporting design docs. It is early-stage and not yet production software.
 
-Every framework above is simplified for demonstration purposes. None of them should be used in a real programme without review by cultural advisors from the relevant community first: several are drawn from statutory child-wellbeing practice guidance, not general reference material, and carry real weight.
+Every framework above is simplified for demonstration purposes. None of them should be used in a real programme without support from cultural advisors from the relevant community first.
 
 Feedback, critique, and cultural review from community partners are actively welcome.
