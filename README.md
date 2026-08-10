@@ -1,5 +1,7 @@
 # Talanoa Toolkit
 
+Prototype v1 July 2026
+
 Co-designing wellbeing, together.
 
 Talanoa Toolkit is a participatory design platform for building wellbeing programmes *with* the people they're meant to serve, not just *for* them. Most wellbeing and mental health apps ship generic content and see it fail: median 30-day retention across the category sits in the low single digits, and nearly 4 in 10 users cite "no measurable improvement" as their reason for quitting. The gap isn't content: it's relevance, trust, and genuine involvement.
