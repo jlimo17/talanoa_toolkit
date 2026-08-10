@@ -18,11 +18,13 @@ function Ripple({ size = 20, active = false }) {
 }
 
 const STEPS = [
-  { id: 1, label: "Session Builder", hint: "Choose a framework, generate prompts" },
-  { id: 2, label: "Capture", hint: "Record with consent, online or off" },
-  { id: 3, label: "Synthesis", hint: "Draft themes, facilitator-validated" },
-  { id: 4, label: "Blueprint", hint: "A plan both sides sign" },
-  { id: 5, label: "Closing the Loop", hint: "Report back, track reciprocity" },
+  { id: 1, label: "Reciprocity", hint: "What the community gets back" },
+  { id: 2, label: "Glossary", hint: "Frameworks, key terms, sources" },
+  { id: 3, label: "Session Builder", hint: "Choose a framework, generate prompts" },
+  { id: 4, label: "Capture", hint: "Record with consent, online or off" },
+  { id: 5, label: "Synthesis", hint: "Draft themes, facilitator-validated" },
+  { id: 6, label: "Blueprint", hint: "A plan both sides sign" },
+  { id: 7, label: "Closing the Loop", hint: "Report back, track reciprocity" },
 ];
 
 const FRAMEWORKS = {
@@ -140,6 +142,108 @@ const FRAMEWORKS = {
       "Relationships — Who makes this place feel like a community?",
       "Meaning — What part of this work matters most to you?",
     ],
+  },
+};
+
+const CAVEAT =
+  "Every description below is simplified for this prototype and has not yet been reviewed by cultural advisors from the relevant community. Treat it as a starting point for conversation, not a finished or authoritative account.";
+
+/* Real, published sources only. Two entries below carry an extra
+   sensitivity note because their documented use sits in family violence
+   prevention and, for Te Maiu Raoi, statutory child wellbeing practice. */
+const GLOSSARY = {
+  fonofale: {
+    keyTerms:
+      "Fale (house), foundation (family), posts (physical, spiritual, mental, and other dimensions such as age, gender, sexuality, and socioeconomic status), roof (culture), and the surrounding circle (environment, time, and context).",
+    caseStudy:
+      "Used alongside Te Whare Tapa Whā as the cultural grounding for a codesign process that developed a culturally tailored mobile health behaviour change intervention with Māori and Pasifika communities in New Zealand.",
+    citation:
+      "Cited in a peer reviewed case study on using codesign to develop culturally tailored mHealth interventions for Indigenous and other priority communities in New Zealand (referencing Pulotu-Endemann's Fonofale model).",
+    sensitivity: "",
+  },
+  tewhare: {
+    keyTerms:
+      "Taha tinana, taha hinengaro, taha whānau, and taha wairua, pictured as the four walls of a wharenui.",
+    caseStudy:
+      "Used as the guiding framework in a qualitative study of psychosocial wellbeing among older adults and family members in long term aged care in New Zealand during the COVID-19 pandemic.",
+    citation:
+      "Psychosocial well-being in long-term care in the wake of COVID-19: findings from a qualitative study in New Zealand, drawing on Mason Durie's Whare Tapa Whā model of health (1985).",
+    sensitivity: "",
+  },
+  sautu: {
+    keyTerms:
+      "Vuvale (family unit), Mana (spiritual power and respect), Tabu (boundaries that protect sacred relationships), and Veitokoni (mutual support).",
+    caseStudy:
+      "Forms the basis of Vuvale Doka Sautu, a cultural framework developed by the Fijian Working Group for family violence prevention practice with Fijian families in New Zealand.",
+    citation:
+      "Vuvale Doka Sautu: a Fijian cultural framework for family violence, developed as part of the Ngā Vaka o Kāiga Tapu family violence prevention work in New Zealand.",
+    sensitivity:
+      "This framework's main documented use is in family violence prevention practice, a high stakes and sensitive setting. Treat it as needing cultural review before any use beyond demonstration.",
+  },
+  fonuaola: {
+    keyTerms:
+      "Five interdependent dimensions of life, addressed together to maintain harmony, across four phases in the natural order of Fonua.",
+    caseStudy:
+      "Used to construct themes in a talanoa based study of Tongan residents' attitudes to chronic cough and healthcare access in New Zealand.",
+    citation:
+      "Peer reviewed study on Aotearoa New Zealand Tongan residents' attitudes to chronic cough and healthcare access, drawing on Sione Tu'itahi's Fonua model of health promotion (2007, 2009).",
+    sensitivity: "",
+  },
+  vakaatafaga: {
+    keyTerms:
+      "A voyaging canoe metaphor, with different parts of the vessel representing dimensions of a person's wellbeing that must work together for the canoe to sail well.",
+    caseStudy:
+      "Developed and published as a formal assessment model to support holistic mental health practice with Tokelau people in Aotearoa New Zealand, based on the author's clinical nursing experience.",
+    citation:
+      "Kupa, K. (2009). Te Vaka Atafaga: a Tokelau assessment model for supporting holistic mental health practice with Tokelau people in Aotearoa, New Zealand. Pacific Health Dialog, 15(1), 156 to 163.",
+    sensitivity: "",
+  },
+  tivaevae: {
+    keyTerms:
+      "Three phases mirroring the making of a tivaevae quilt: planning, sewing, and reflecting, incorporating values such as aroa (love) and tu akangateitei (respect).",
+    caseStudy:
+      "Used as the guiding research method in a PhD study exploring Cook Islands youth views of sexuality, with the research process structured to mirror the three phases of tivaevae making.",
+    citation:
+      "Futter-Puati, D., and Maua-Hodges, T. (2019). Stitching tivaevae: a Cook Islands research method. AlterNative.",
+    sensitivity: "",
+  },
+  maiuraoi: {
+    keyTerms:
+      "Marin abara (a healthy environment and ecology), tetoronibwai (self-reliance), te katei (customary practices), and te karinerine (respect), within te utuu, te kaainga, and te mwaneaba.",
+    caseStudy:
+      "Forms the basis of Boutokaan Te Mweeraoi, a Kiribati conceptual framework used in New Zealand family violence prevention training, and separately referenced in Oranga Tamariki's own practice guidance for I-Kiribati children and families.",
+    citation:
+      "Boutokaan te Mweeraoi: a conceptual framework for enhancing I-Kiribati wellbeing (Ngā Vaka o Kāiga Tapu), and Oranga Tamariki Practice Centre guidance, Ribanakin Te Ataei n Ana te Utu.",
+    sensitivity:
+      "This framework's documented use spans family violence prevention and statutory child wellbeing practice, among the highest stakes settings in this glossary. Do not use it in any real programme without direct guidance from I-Kiribati cultural advisors.",
+  },
+  niue: {
+    keyTerms:
+      "Fakatupuolamoui, to thrive vigorously and abundantly, signifying the potential for Niuean families and individuals to achieve wellbeing and be strong and vibrant.",
+    caseStudy:
+      "The documented framework, correctly named Koe Fakatupuolamoui he tau Magafaoa Niue, underpins family violence prevention training for Niuean practitioners in New Zealand, and has also informed community led work such as a digital literacy programme supporting Niuean elders in Ōtāhuhu, Auckland.",
+    citation:
+      "Koe Fakatupuolamoui he tau Magafaoa Niue: a Niuean conceptual framework for addressing family violence, Ministry of Social Development and Ngā Vaka o Kāiga Tapu.",
+    sensitivity:
+      "The label used elsewhere in this file, \"Ko e Niu e\", does not match the documented framework name above. That should be corrected at the source. As with Sautu and Te Maiu Raoi, this framework's documented use includes family violence prevention practice, so treat it with the same caution.",
+  },
+  lokahi: {
+    keyTerms:
+      "Pono (righteousness) and lōkahi (balance) between kānaka (people), 'āina (land, nature, environment), and akua (the spiritual realm), aiming toward mauli ola, optimal health and wellbeing.",
+    caseStudy:
+      "Informed the Ola Triangle framework used to code findings in a qualitative study of Native Hawaiian youth experiences of historical trauma, gathered through talk story sessions.",
+    citation:
+      "Ke ala i ka Mauliola: Native Hawaiian youth experiences with historical trauma, International Journal of Environmental Research and Public Health (2022).",
+    sensitivity: "",
+  },
+  perma: {
+    keyTerms:
+      "Positive emotion, Engagement, Relationships, Meaning, and Accomplishment, sometimes extended with physical health, mindset, work environment, and economic security.",
+    caseStudy:
+      "Used as the guiding model in a study exploring psychological wellbeing among staff in a multicultural university workplace.",
+    citation:
+      "A PERMA-nent solution to understanding psychological wellbeing? Exploring the utility of the PERMA model in a university workplace, Frontiers in Psychology, drawing on Martin Seligman's wellbeing theory.",
+    sensitivity: "",
   },
 };
 
@@ -314,6 +418,37 @@ export default function TalanoaToolkitDemo() {
         .tt-toggle--active { border-color: var(--ocean); background: var(--ocean); color: var(--paper); }
         .tt-toggle:focus-visible { outline: 2px solid var(--sunset); outline-offset: 2px; }
 
+        /* Reciprocity module */
+        .tt-field-label { font-size: 12.5px; font-weight: 500; margin: 16px 0 6px; color: var(--ink); }
+        .tt-textarea, .tt-text-input {
+          width: 100%; border: 1.5px solid var(--line); border-radius: 10px;
+          padding: 11px 13px; font-size: 13.5px; font-family: 'IBM Plex Sans', sans-serif;
+          color: var(--ink); background: #fff;
+        }
+        .tt-textarea { min-height: 84px; resize: vertical; }
+        .tt-textarea:focus, .tt-text-input:focus { outline: 2px solid var(--ocean); outline-offset: 1px; }
+        .tt-check-row { display: flex; align-items: flex-start; gap: 9px; margin: 16px 0; font-size: 13px; color: var(--ink-soft); }
+        .tt-check-row input { margin-top: 3px; }
+        .tt-callout {
+          display: flex; gap: 9px; padding: 11px 13px; border-radius: 10px;
+          background: var(--paper-dim); border: 1px solid var(--line); font-size: 12.5px;
+          line-height: 1.5; color: var(--ink-soft); margin: 12px 0;
+        }
+        .tt-callout--warn { background: #F5E7DD; border-color: var(--coral); color: #6B3623; }
+
+        /* Glossary module */
+        .tt-glossary-item { border: 1px solid var(--line); border-radius: 12px; background: #fff; margin-bottom: 10px; }
+        .tt-glossary-summary {
+          cursor: pointer; list-style: none; padding: 13px 16px;
+          display: flex; align-items: center; justify-content: space-between; gap: 10px;
+        }
+        .tt-glossary-summary::-webkit-details-marker { display: none; }
+        .tt-glossary-summary-name { font-family: 'Fraunces', serif; font-size: 15px; font-weight: 500; }
+        .tt-glossary-summary-origin { font-size: 11px; color: var(--coral); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 2px; }
+        .tt-glossary-body { padding: 0 16px 16px; font-size: 12.5px; color: var(--ink-soft); line-height: 1.55; }
+        .tt-glossary-body h4 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink); margin: 10px 0 4px; }
+        .tt-cite { font-size: 11.5px; color: var(--ink-soft); font-style: italic; margin-top: 4px; }
+
         /* Capture module */
         .tt-capture-layout { display: grid; grid-template-columns: 260px 1fr; gap: 20px; }
         @media (max-width: 780px) { .tt-capture-layout { grid-template-columns: 1fr; } }
@@ -426,18 +561,154 @@ export default function TalanoaToolkitDemo() {
         </nav>
 
         <main className="tt-main">
-          {step === 1 && <SessionBuilder />}
-          {step === 2 && <Capture />}
-          {step === 3 && <Synthesis />}
-          {step === 4 && <Blueprint />}
-          {step === 5 && <ClosingTheLoop />}
+          {step === 1 && <Reciprocity />}
+          {step === 2 && <Glossary />}
+          {step === 3 && <SessionBuilder />}
+          {step === 4 && <Capture />}
+          {step === 5 && <Synthesis />}
+          {step === 6 && <Blueprint />}
+          {step === 7 && <ClosingTheLoop />}
         </main>
       </div>
     </div>
   );
 }
 
-/* ---------------- 01 Session Builder ---------------- */
+/* ---------------- 01 Reciprocity ---------------- */
+function Reciprocity() {
+  const [statement, setStatement] = useState("");
+  const [shareBeyond, setShareBeyond] = useState(false);
+  const [purpose, setPurpose] = useState("");
+  const [confirmed, setConfirmed] = useState(false);
+
+  return (
+    <div>
+      <div className="tt-eyebrow tt-mono">01 · Reciprocity</div>
+      <h1 className="tt-h1 tt-display">Say what the community gets back, before anyone gives their time</h1>
+      <p className="tt-lede">
+        The Blueprint this session produces belongs to the people who take part, whether
+        or not their input is ever used beyond it. This step is where that gets said
+        plainly, before Session Builder or Capture begin. In this demo it is not yet
+        required to move on, in a real session it would be.
+      </p>
+
+      <div className="tt-card">
+        <div className="tt-field-label">What will this community get back, specifically?</div>
+        <textarea
+          className="tt-textarea"
+          value={statement}
+          onChange={(e) => setStatement(e.target.value)}
+          placeholder="For example: a copy of the Blueprint to use for your own funding applications, a plain language summary within four weeks, and an honorarium for everyone who takes part."
+        />
+
+        <div className="tt-field-label">Will this session's information be used for anything beyond this community's own Blueprint?</div>
+        <div className="tt-toggle-row">
+          <button
+            className={`tt-toggle ${!shareBeyond ? "tt-toggle--active" : ""}`}
+            onClick={() => setShareBeyond(false)}
+          >
+            No, stays with the community
+          </button>
+          <button
+            className={`tt-toggle ${shareBeyond ? "tt-toggle--active" : ""}`}
+            onClick={() => setShareBeyond(true)}
+          >
+            Yes, may be shared elsewhere
+          </button>
+        </div>
+
+        {shareBeyond && (
+          <>
+            <div className="tt-field-label">What will it be used for?</div>
+            <input
+              className="tt-text-input"
+              type="text"
+              value={purpose}
+              onChange={(e) => setPurpose(e.target.value)}
+              placeholder="For example: a PhD thesis, a published paper, a funding application"
+            />
+            <div className="tt-callout">
+              Participants would be asked separately, during Capture, whether they
+              personally consent to this specific use, separate from agreeing to take
+              part at all.
+            </div>
+          </>
+        )}
+
+        <div className="tt-check-row">
+          <input type="checkbox" checked={confirmed} onChange={(e) => setConfirmed(e.target.checked)} id="tt-confirm" />
+          <label htmlFor="tt-confirm">
+            I confirm the above reflects what will actually happen, and this session's
+            information will not be used beyond what participants specifically agree to.
+          </label>
+        </div>
+
+        {confirmed && statement.trim() && (
+          <div className="tt-confirm-banner">
+            <CheckCircle2 size={16} /> Reciprocity statement recorded for this session.
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+/* ---------------- 02 Glossary ---------------- */
+function Glossary() {
+  return (
+    <div>
+      <div className="tt-eyebrow tt-mono">02 · Glossary</div>
+      <h1 className="tt-h1 tt-display">Ten frameworks, and one documented example of each</h1>
+      <p className="tt-lede">
+        Key terms and a real, published example for every framework in Session Builder.
+        These are single examples, not a full picture of how each framework is used, and
+        none of them replace guidance from cultural advisors connected to that community.
+      </p>
+
+      <div className="tt-callout tt-callout--warn">{CAVEAT}</div>
+
+      <div style={{ marginTop: 16 }}>
+        {Object.entries(FRAMEWORKS).map(([key, f]) => {
+          const g = GLOSSARY[key] || {};
+          return (
+            <details className="tt-glossary-item" key={key}>
+              <summary className="tt-glossary-summary">
+                <span>
+                  <div className="tt-glossary-summary-name">{f.name}</div>
+                  <div className="tt-glossary-summary-origin">{f.origin}</div>
+                </span>
+              </summary>
+              <div className="tt-glossary-body">
+                <h4>What it means</h4>
+                <p>{f.blurb}</p>
+                {g.keyTerms && (
+                  <>
+                    <h4>Key terms</h4>
+                    <p>{g.keyTerms}</p>
+                  </>
+                )}
+                {g.caseStudy && (
+                  <>
+                    <h4>A documented example</h4>
+                    <p>{g.caseStudy}</p>
+                    <div className="tt-cite">Source: {g.citation}</div>
+                  </>
+                )}
+                {g.sensitivity && (
+                  <div className="tt-callout tt-callout--warn" style={{ marginTop: 10 }}>
+                    {g.sensitivity}
+                  </div>
+                )}
+              </div>
+            </details>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+/* ---------------- 03 Session Builder ---------------- */
 function SessionBuilder() {
   const [framework, setFramework] = useState("fonofale");
   const [sessionType, setSessionType] = useState("group");
@@ -446,7 +717,7 @@ function SessionBuilder() {
 
   return (
     <div>
-      <div className="tt-eyebrow tt-mono">01 · Session Builder</div>
+      <div className="tt-eyebrow tt-mono">03 · Session Builder</div>
       <h1 className="tt-h1 tt-display">Start from a framework your community already trusts</h1>
       <p className="tt-lede">Pick the wellbeing model this session should be grounded in. Prompts, the diagram, and the language shown to participants adjust automatically — nothing here is one-size-fits-all.</p>
 
@@ -617,7 +888,7 @@ function SessionBuilder() {
   );
 }
 
-/* ---------------- 02 Capture ---------------- */
+/* ---------------- 04 Capture ---------------- */
 function Capture() {
   const [recording, setRecording] = useState(false);
   const [offline, setOffline] = useState(false);
@@ -641,7 +912,7 @@ function Capture() {
 
   return (
     <div>
-      <div className="tt-eyebrow tt-mono">02 · Capture</div>
+      <div className="tt-eyebrow tt-mono">04 · Capture</div>
       <h1 className="tt-h1 tt-display">Record the room, not just one voice</h1>
       <p className="tt-lede">Works fully offline and syncs later. Consent can be given by one person, or by the group as a whole — the record reflects however the session actually agreed.</p>
 
@@ -699,7 +970,7 @@ function Capture() {
   );
 }
 
-/* ---------------- 03 Synthesis ---------------- */
+/* ---------------- 05 Synthesis ---------------- */
 function Synthesis() {
   const [running, setRunning] = useState(false);
   const [done, setDone] = useState(false);
@@ -714,7 +985,7 @@ function Synthesis() {
 
   return (
     <div>
-      <div className="tt-eyebrow tt-mono">03 · Synthesis</div>
+      <div className="tt-eyebrow tt-mono">05 · Synthesis</div>
       <h1 className="tt-h1 tt-display">Themes are drafts until your facilitator says otherwise</h1>
       <p className="tt-lede">Clustering runs on the transcript from Capture. Nothing here is final — a facilitator confirms, edits, or removes each theme before it becomes part of the record.</p>
 
@@ -756,13 +1027,13 @@ function Synthesis() {
   );
 }
 
-/* ---------------- 04 Blueprint ---------------- */
+/* ---------------- 06 Blueprint ---------------- */
 function Blueprint() {
   const [signed, setSigned] = useState({ org: false, community: false });
 
   return (
     <div>
-      <div className="tt-eyebrow tt-mono">04 · Blueprint</div>
+      <div className="tt-eyebrow tt-mono">06 · Blueprint</div>
       <h1 className="tt-h1 tt-display">A plan both sides put their name to</h1>
       <p className="tt-lede">Confirmed themes become recommended actions with clear ownership. It's signed by the organisation and by a community representative — an agreement, not just a summary.</p>
 
@@ -825,13 +1096,13 @@ function Blueprint() {
   );
 }
 
-/* ---------------- 05 Closing the Loop ---------------- */
+/* ---------------- 07 Closing the Loop ---------------- */
 function ClosingTheLoop() {
   const [sent, setSent] = useState(false);
 
   return (
     <div>
-      <div className="tt-eyebrow tt-mono">05 · Closing the Loop</div>
+      <div className="tt-eyebrow tt-mono">07 · Closing the Loop</div>
       <h1 className="tt-h1 tt-display">People who give their time hear what happened next</h1>
       <p className="tt-lede">The most common failure of consultation is silence afterward. This is where results go back to the communities that gave them, and where reciprocity gets tracked, not assumed.</p>
 
